@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sold — Make The Switch</title>
+  <meta name="description" content="Sold connects homeowners to lenders’ best unadvertised mortgage offers after analysing your mortgage via Open Banking." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#fff; color:#0a0a0a; font-family: 'Inter', sans-serif; }
+    .btn { border:1px solid #111; border-radius:0.75rem; padding:0.9rem 1.3rem; font-weight:600; transition:all .25s ease; }
+    .btn-primary { background:#0a0a0a; color:#fff; }
+    .btn-primary:hover { background:#212122; }
+    .btn-ghost { background:#fff; color:#0a0a0a; }
+    .btn-ghost:hover { background:#f5f5f5; }
+    .link { position:relative; }
+    .link::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:2px; background:linear-gradient(90deg,#0a0a0a,#212122); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+    .link:hover::after { transform:scaleX(1); }
+    .hide { display:none; }
+    input, textarea { color:#fff !important; background:#0a0a0a; border-radius:0.5rem; }
+    input::placeholder, textarea::placeholder { color:#aaa; }
+    h1,h2,h3 { letter-spacing:-0.02em; }
+    p { line-height:1.7; }
+    .fade { opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
+    .fade.visible { opacity:1; transform:translateY(0); }
+    .dotpoints li { white-space:nowrap; font-size:0.95rem; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-end">
+    <nav class="text-sm flex items-center gap-5">
+      <button class="link" data-nav="home">Home</button>
+      <button class="link" data-nav="customers">Customers</button>
+      <button class="link" data-nav="lenders">Lenders</button>
+    </nav>
+  </header>
+
+  <main id="view-home" class="max-w-6xl mx-auto px-6 py-28 fade">
+    <div class="max-w-3xl">
+      <h1 class="text-5xl md:text-7xl font-black leading-tight">Recreate the <span class="underline">SOLD</span> feeling.</h1>
+      <p class="mt-8 text-xl text-neutral-700">
+        We analyse your current mortgage via Open Banking, then connect you with a lender's back‑book (secret) offers that aren’t publicly advertised.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-5">
+        <button class="btn btn-primary text-lg" data-nav="customers">I’m a customer</button>
+        <button class="btn btn-ghost text-lg" data-nav="lenders">I’m a lender</button>
+      </div>
+    </div>
+  </main>
+
+  <section id="view-customers" class="hide max-w-6xl mx-auto px-6 py-28 fade">
+    <div class="max-w-3xl">
+      <h2 class="text-4xl md:text-5xl font-bold">For customers</h2>
+      <p class="mt-6 text-lg text-neutral-700">
+        We analyse your current mortgage via Open Banking, then connect you with secret offers that aren’t publicly advertised.
+      </p>
+      <ul class="mt-8 space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>Connect accounts via Open Banking (read‑only, with consent).</li>
+        <li>Get a personalised savings estimate inside the Sold Qualifier.</li>
+        <li>We introduce you to a lender who completes the suitability checks.</li>
+      </ul>
+      <div class="mt-10 flex gap-5 flex-wrap">
+        <a href="https://sold-mortgage-qualifier-demo.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary text-lg">Try the Sold Qualifier ↗</a>
+        <button class="btn btn-ghost text-lg" data-nav="home">Back</button>
+      </div>
+      <p class="mt-6 text-sm text-neutral-500 max-w-prose">
+        Disclaimer: Information provided by Sold is general in nature and not credit advice. Any credit product recommendation and suitability assessment is completed by the lender.
+      </p>
+    </div>
+  </section>
+
+  <section id="view-lenders" class="hide max-w-6xl mx-auto px-6 py-28 fade">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold">For lenders</h2>
+        <p class="mt-6 text-lg text-neutral-700">
+          Sold delivers pre‑qualified homeowners to your internal teams so you can dial mortgage flow up or down whilst respecting internal ROE hurdles and cost of capital requirements without touching front‑book pricing.
+        </p>
+        <ul class="mt-8 space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+          <li>Portfolio optimisation by segment, postcode, LVR, or channel.</li>
+          <li>Consent‑backed data for swift income/expense validation.</li>
+          <li>No disruption to advertised front‑book rates.</li>
+        </ul>
+      </div>
+      <div class="bw-card p-8" id="contact">
+        <h3 class="text-xl font-semibold">Contact us</h3>
+        <p class="mt-3 text-base text-neutral-700">We’ll get back to you in 1-2 business days.</p>
+        <form class="mt-6 space-y-5" action="https://formspree.io/f/your-form-id" method="POST">
+          <div>
+            <label class="block text-sm mb-1" for="name">Name</label>
+            <input class="w-full px-3 py-3 outline-none focus:ring-2 focus:ring-black" type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="email">Work email</label>
+            <input class="w-full px-3 py-3 outline-none focus:ring-2 focus:ring-black" type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="message">Message</label>
+            <textarea class="w-full px-3 py-3 outline-none focus:ring-2 focus:ring-black" id="message" name="message" rows="4" placeholder="Tell us about your flow objectives…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary text-lg">Send</button>
+          <button type="button" class="btn btn-ghost text-lg" data-nav="home">Back</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-6xl mx-auto px-6 py-16 text-sm text-neutral-500">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <p>© <span id="y"></span> Sold. All rights reserved.</p>
+      <div class="flex gap-6">
+        <button class="link" data-nav="customers">Customers</button>
+        <button class="link" data-nav="lenders">Lenders</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const views = {
+      home: document.getElementById('view-home'),
+      customers: document.getElementById('view-customers'),
+      lenders: document.getElementById('view-lenders')
+    };
+    function show(view){
+      Object.values(views).forEach(v=>v.classList.add('hide'));
+      views[view].classList.remove('hide');
+      window.scrollTo({top:0, behavior:'instant'});
+      setTimeout(()=>views[view].classList.add('visible'),50);
+    }
+    document.addEventListener('click', (e)=>{
+      const t = e.target.closest('[data-nav]');
+      if(!t) return;
+      e.preventDefault();
+      const dest = t.getAttribute('data-nav');
+      if(views[dest]) show(dest);
+      if(dest==='home') history.replaceState({}, '', '#');
+      else history.replaceState({}, '', '#'+dest);
+    });
+    const hash = (location.hash||'').replace('#','');
+    if(hash && views[hash]) show(hash); else show('home');
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
