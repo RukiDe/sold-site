@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sold · 90-Day First Home Buyer Roadmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    /* Standalone Sold styling — matches sold.financial look */
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #111827;
+    }
+
+    .fhb-section {
+      padding: 72px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .fhb-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 0 0 12px;
+    }
+
+    @media (min-width: 640px) {
+      .fhb-header h1 { font-size: 3rem; }
+    }
+
+    @media (min-width: 768px) {
+      .fhb-header h1 { font-size: 3.5rem; }
+    }
+
+    .fhb-header p {
+      max-width: 650px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #4b5563;
+      margin: 0;
+    }
+
+    /* Layout Grid */
+    .fhb-grid {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 900px) {
+      .fhb-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* Roadmap cards */
+    .fhb-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px 18px 20px;
+    }
+
+    .fhb-phase-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 10px;
+      color: #111827;
+    }
+
+    .fhb-phase-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ff884d;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .fhb-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .fhb-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #374151;
+    }
+
+    .fhb-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #ff884d;
+      font-weight: bold;
+    }
+
+    /* CTA block */
+    .fhb-cta {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .fhb-cta h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .fhb-cta p {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .fhb-cta ul {
+      padding-left: 20px;
+      margin: 0 0 16px;
+      color: #374151;
+    }
+
+    .fhb-cta-highlight {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #7c2d12;
+      margin-bottom: 18px;
+    }
+
+    .fhb-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #111827;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid #111827;
+      transition: 0.12s ease;
+    }
+
+    .fhb-button span { margin-left: 6px; font-weight: 700; }
+
+    .fhb-button:hover {
+      background: white;
+      color: #111827;
+      transform: translateY(-1px);
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="fhb-section">
+    <!-- Heading -->
+    <div class="fhb-header">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-black leading-tight inline-flex items-center gap-2 whitespace-nowrap">
+        90 Day <span class="underline">First Home Buyer</span> Roadmap<span class="relative top-[2px]">✨</span>
+      </h1>
+      <p>
+        A simple sequence to get your banking, savings and docs into shape so when you apply for a loan, everything looks clean, stable and lender-ready.
+      </p>
+    </div>
+
+    <!-- Layout -->
+    <div class="fhb-grid">
+
+      <!-- Left Column: Roadmap -->
+      <div class="space-y-6">
+
+        <!-- Days 1–30 -->
+        <div class="fhb-card">
+          <div class="fhb-phase-title">
+            <span class="fhb-phase-pill">Days 1–30</span>
+            <span>Spring Cleaning 🍃</span>
+          </div>
+          <ul class="fhb-list">
+            <li>Clean up accounts and remove noisy, messy transactions.</li>
+            <li>Start funnelling savings into one <strong>home deposit</strong> account (showing savings habits matters).</li>
+            <li>Clear smaller debts where possible (BNPL, small loans).</li>
+            <li>Stabilise your banking so your statements look calm and consistent.</li>
+          </ul>
+        </div>
+
+        <!-- Days 31–60 -->
+        <div class="fhb-card">
+          <div class="fhb-phase-title">
+            <span class="fhb-phase-pill">Days 31–60</span>
+            <span>Positive Signalling ✨</span>
+          </div>
+          <ul class="fhb-list">
+            <li>Maintain a regular savings pattern each pay cycle.</li>
+            <li>Organise payslips, IDs and statements in one folder.</li>
+            <li>Keep your transaction history “boring” and predictable.</li>
+            <li>Get a high-level view of your borrowing power & price range.</li>
+          </ul>
+        </div>
+
+        <!-- Days 61–90 -->
+        <div class="fhb-card">
+          <div class="fhb-phase-title">
+            <span class="fhb-phase-pill">Days 61–90</span>
+            <span>Geting Application Ready 💰</span>
+          </div>
+          <ul class="fhb-list">
+            <li>Lock in your deposit position (including gifts or contributions).</li>
+            <li>Confirm which grants or stamp duty concessions you may access.</li>
+            <li>Avoid new credit applications or big new repayments.</li>
+            <li>Pull together a pack of certified IDs.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column: CTA -->
+      <div class="fhb-cta">
+        <h3>Work with Sold</h3>
+        <p>
+          We make the first home buying process less confusing and more predictable. Using Open
+          Banking, lender analysis and scenario modelling, we help you understand:
+        </p>
+
+        <ul>
+          <li>What you can comfortably afford</li>
+          <li>Which lenders may suit your profile</li>
+          <li>How to structure things for long-term success</li>
+        </ul>
+
+        <p class="fhb-cta-highlight">
+          When you’re ready, connect your accounts securely via Open Banking in under two minutes.
+          Free and obligation-free.
+        </p>
+
+        <a href="https://sold.financial" class="fhb-button">
+          Get started at <span>sold.financial</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

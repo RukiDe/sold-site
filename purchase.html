@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sold — Purchase</title>
+  <meta name="description" content="Plan your next move - estimate borrowing power, compare loan features and understand bridging or sell-then-buy options." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { background:#fff; color:#0a0a0a; font-family:'Inter',sans-serif; }
+    .btn { border:1px solid #111; border-radius:0.75rem; padding:0.9rem 1.3rem; font-weight:600; transition:all .25s ease; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
+    .btn-primary { background:#0a0a0a; color:#fff; }
+    .btn-primary:hover { background:#212122; }
+    .btn-ghost { background:#fff; color:#0a0a0a; }
+    .btn-ghost:hover { background:#f5f5f5; }
+    .bw-card { border:1px solid #111; border-radius:0.75rem; }
+    .dotpoints li { white-space:nowrap; font-size:clamp(0.8rem, 2.8vw, 0.95rem); letter-spacing:-0.01em; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between">
+    <a href="/" class="text-sm font-semibold hover:opacity-80">← Home</a>
+    <nav class="text-sm flex items-center gap-4 sm:gap-5">
+      <a class="hover:opacity-80" href="/#customers">Customers</a>
+      <a class="hover:opacity-80" href="/#lenders">Lenders</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">Purchasing?</h1>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        Planning your next move? We help you estimate borrowing power, compare offset and redraw features, and understand bridging or sell-then-buy options - all without a credit check.
+      </p>
+      <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>See what you can borrow based on your income and equity.</li>
+        <li>Compare bridging, fixed/variable and offset structures.</li>
+        <li>Get a realistic timeframe for pre-approval and settlement.</li>
+      </ul>
+
+      <!-- Section intro -->
+      <h2 class="mt-10 text-lg sm:text-xl font-semibold">First, tell us a bit about your purchase</h2>
+      <p class="text-sm text-neutral-700 mb-4">
+        Answer some quick questions - no credit checks, just a sense of where you stand with a range of lender offers currently available on the market.
+      </p>
+    </div>
+
+    <!-- Form card with tighter padding -->
+    <div class="bw-card p-3 sm:p-4 md:p-5">
+      <div class="w-full flex justify-center">
+        <iframe
+          src="https://13b359ae.sibforms.com/serve/MUIFAFv1x8v7IYoAfW1CpoVQeNNHc-jzQtVALEFKOO3JZenOOpYHjlaY4HQ9aiEXXNf0h-7vxtTRLv7E2MuvJ6sCGmaxa1kLtNhggz2OqkD0MuaDqg1LP5d5zbAjCt75dJBYx7lBxdF9j8Mvsoky3MlIwVKPWbtksneuHd56avMoILB0dsRtQKdgCRqCqysGpVZG6sFTbZYHFJoMWw=="
+          style="width:100%; max-width:720px; height:840px; border:0; border-radius:10px; display:block;"
+          title="Sold - Purchase / Upgrader form"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="mt-3 text-xs text-neutral-600 text-center">
+        Secure, read-only via Open Banking - you are in control of your data.
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a class="btn btn-ghost" href="/">← Back to Home</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-sm text-neutral-400">
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <p>© <span id="y"></span> Sold. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:opacity-80" href="/#customers">Customers</a>
+          <a class="hover:opacity-80" href="/#lenders">Lenders</a>
+          <a class="hover:opacity-80" href="/privacy">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="text-xs leading-6 text-neutral-600">
+        <p>
+          <strong>Sold Financial</strong> is a trading name of <strong>Homei Fi Pty Ltd</strong> (ABN 26 691 328 499).<br>
+          Homei Fi Pty Ltd (Credit Representative Number <strong>573517</strong>) is authorised under
+          Australian Credit Licence Number <strong>486112</strong> (Purple Circle Financial Services Pty Ltd).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

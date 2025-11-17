@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Connect via Open Banking — Sold</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>">
+  <meta name="description" content="Securely connect your accounts via Frollo (CDR). Read-only. Takes ~2 minutes.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body { background:#fff; color:#0a0a0a; font-family:'Inter',sans-serif; }
+    .btn { border:1px solid #111; border-radius:0.75rem; padding:0.9rem 1.3rem; font-weight:600; transition:all .25s ease; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
+    .btn-primary { background:#0a0a0a; color:#fff; }
+    .btn-primary:hover { background:#212122; }
+    .btn-ghost { background:#fff; color:#0a0a0a; }
+    .btn-ghost:hover { background:#f5f5f5; }
+    .link { position:relative; }
+    .link::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:2px; background:linear-gradient(90deg,#0a0a0a,#212122); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+    .link:hover::after { transform:scaleX(1); }
+  </style>
+</head>
+<body class="min-h-screen">
+  <header class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-end">
+    <nav class="text-sm flex items-center gap-4 sm:gap-5">
+      <a class="link" href="/">Home</a>
+      <a class="link" href="/#customers">Customers</a>
+      <a class="link" href="/#lenders">Lenders</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+    <!-- Main text -->
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">Connect via Open Banking</h1>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        We partner with <strong>Frollo</strong> who are accredited under the Australian Government's Consumer Data Right to ensure your safety (no more sharing passwords).
+      </p>
+      <ul class="mt-2 sm:mt-3 text-base sm:text-lg text-neutral-700 space-y-1">
+        <li>🔒 Secure</li>
+        <li>📖 Read-only</li>
+        <li>⚡ Connects in minutes</li>
+      </ul>
+    </div>
+
+    <!-- Form container -->
+    <div class="max-w-3xl mt-8 sm:mt-10">
+      <div class="border border-neutral-200 rounded-2xl bg-white overflow-hidden">
+        <iframe
+          title="Sold — Connect via Frollo"
+          src="https://13b359ae.sibforms.com/serve/MUIFAFLaD8cvScBhYHTYZlfVFBENdx8kkYJ1_8RJR_kBCKqSBGx-AvjWimpn4lqaNBGTWOy1rz-aKiNW9qlMw2A-pIq9aVkHO0zMm2GeI2lh3pen5gQDCAyP2ZEWzwVLmp6QLVUz-qfD9pSZm10iExjUjF-sPue_BeYOBqM1AuNGyZj9fx0GvU31g19VTtx8EbPlSdpfy2MuVn6feg=="
+          width="100%" height="540" frameborder="0" style="display:block;" allowtransparency="true"
+          loading="eager" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-sm text-neutral-400">
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <p>© <span id="y"></span> Sold. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="link" href="/#customers">Customers</a>
+          <a class="link" href="/#lenders">Lenders</a>
+          <a class="link" href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="text-xs leading-6 text-neutral-600">
+        <p>
+          <strong>Sold Financial</strong> is a trading name of <strong>Homei Fi Pty Ltd</strong> (ABN 26 691 328 499).<br>
+          Homei Fi Pty Ltd (Credit Representative Number <strong>573517</strong>) is authorised under
+          Australian Credit Licence Number <strong>486112</strong> (Purple Circle Financial Services Pty Ltd).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

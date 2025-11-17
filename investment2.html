@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sold — Investment Property</title>
+  <meta name="description" content="Share a few more details so we can estimate equity, yield and lender appetite for your next investment - no credit check." />
+  <meta name="robots" content="noindex, nofollow" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { background:#fff; color:#0a0a0a; font-family:'Inter',sans-serif; }
+    .btn { border:1px solid #111; border-radius:0.75rem; padding:0.9rem 1.3rem; font-weight:600; transition:all .25s; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
+    .btn-ghost { background:#fff; color:#0a0a0a; } .btn-ghost:hover{background:#f5f5f5;}
+    .bw-card { border:1px solid #111; border-radius:0.75rem; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <header class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between">
+    <a href="/" class="text-sm font-semibold hover:opacity-80">← Home</a>
+    <nav class="text-sm flex items-center gap-4 sm:gap-5">
+      <a class="hover:opacity-80" href="/#customers">Customers</a>
+      <a class="hover:opacity-80" href="/#lenders">Lenders</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">Let's shape your next investment</h1>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        Quickly test equity release, rental yield targets and lender appetite for Interest Only vs Princpal&amp;Interest. 
+      </p>
+
+      <h2 class="mt-8 text-lg sm:text-xl font-semibold">A few more details please</h2>
+      <p class="text-sm text-neutral-700 mb-4">
+        These help us gauge borrowing power, structure and which lenders are most suitable for your plan.
+      </p>
+    </div>
+
+    <div class="bw-card p-3 sm:p-4 md:p-5">
+      <div class="w-full flex justify-center">
+        <iframe
+          src="https://13b359ae.sibforms.com/serve/MUIFAFpiGdyabj47pFhYjXO2R4_NGTNN8YYp0hYELynlJ5u_0KSfrwKdLjzfjvtapIPHijJAXVlB8cFxo28OEI8dWyIrOVIyOpA81MHLn_V1uxiTN4SY-x5u6nOVZGKn6c5-muQE1nuO0s9TOeMxSH57VyWvmHrs8uEIX2z6IYV5sTj5OMCj1KjeGRSPZYZhK6-ogIybAnc3ntI23w=="
+          style="width:100%; max-width:720px; height:840px; border:0; border-radius:10px; display:block;"
+          title="Sold - Investment details"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="mt-3 text-xs text-neutral-600 text-center">
+        Secure, read-only via Open Banking when you are ready - you are in control of your data.
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a class="btn btn-ghost" href="/">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-sm text-neutral-400">
+    <div class="flex flex-col gap-4"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4"><p>© <span id="y"></span> Sold. All rights reserved.</p></div></div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

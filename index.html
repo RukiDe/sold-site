@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sold — Make The Switch</title>
+  <meta name="description" content="Sold connects homeowners to lenders’ best unadvertised mortgage offers after analysing your mortgage via Open Banking." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#fff; color:#0a0a0a; font-family: 'Inter', sans-serif; overflow-x:hidden; }
+    .btn { border:1px solid #111; border-radius:0.75rem; padding:0.9rem 1.3rem; font-weight:600; transition:all .25s ease; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
+    .btn-primary { background:#0a0a0a; color:#fff; }
+    .btn-primary:hover { background:#212122; }
+    .btn-ghost { background:#fff; color:#0a0a0a; }
+    .btn-ghost:hover { background:#f5f5f5; }
+    .link { position:relative; }
+    .link::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:2px; background:linear-gradient(90deg,#0a0a0a,#212122); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+    .link:hover::after { transform:scaleX(1); }
+    .hide { display:none; }
+    input, textarea { color:#fff !important; background:#0a0a0a; border-radius:0.5rem; }
+    input::placeholder, textarea::placeholder { color:#aaa; }
+    h1,h2,h3 { letter-spacing:-0.02em; }
+    p { line-height:1.7; }
+    .fade { opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
+    .fade.visible { opacity:1; transform:translateY(0); }
+    .dotpoints li { white-space:nowrap; font-size:clamp(0.8rem, 2.8vw, 0.95rem); letter-spacing:-0.01em; }
+    .bw-card { border:1px solid #111; border-radius:0.75rem; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+  <header class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-end">
+    <nav class="text-sm flex items-center gap-4 sm:gap-5">
+      <button class="link" data-nav="home">Home</button>
+      <button class="link" data-nav="customers">Customers</button>
+      <button class="link" data-nav="lenders">Lenders</button>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main id="view-home" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-black leading-tight inline-flex items-center gap-2 whitespace-nowrap">
+        Get the <span class="underline">SOLD</span> feeling <span class="relative top-[2px]">✨</span>
+      </h1>
+      
+      <p class="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-neutral-700">
+        We analyse your situation using Open Banking, then connect you with great offers from lenders.
+      </p>
+
+      <!-- Subcopy from your request -->
+      <p class="mt-4 text-sm sm:text-base text-neutral-700">
+        Ready to start? Select what you're looking for below, answer some quick questions and we'll give you a sense of where you stand with a range of offers currently available on the market - no credit checks. 
+      </p>
+
+      <!-- 4× funnel buttons linking to new pages -->
+        <div class="mt-8 sm:mt-10 grid grid-cols-2 gap-3 sm:gap-4 max-w-xl">
+          <a href="/refinance" class="btn btn-primary w-full">Refinance 💰</a>
+          <a href="/first-home-buyer" class="btn btn-primary w-full">First Home 🏰</a>
+          <a href="/purchase" class="btn btn-primary w-full">Own & Occupy</a>
+          <a href="/investment" class="btn btn-primary w-full">Investor 📈</a>
+        </div>
+
+    </div>
+  </main>
+
+  <!-- CUSTOMERS (unchanged) -->
+  <section id="view-customers" class="hide max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">For customers</h2>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        We analyse your current mortgage via Open Banking and compare what you're paying against 100s of other lenders.
+      </p>
+      <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>Connect accounts via Open Banking (read-only, with consent).</li>
+        <li>Get personalised savings estimates.</li>
+        <li>Make the switch.</li>
+      </ul>
+      <div class="mt-8 sm:mt-10 flex gap-4 sm:gap-5 flex-wrap">
+        <a href="https://sold.financial/frollo" class="btn btn-primary text-base sm:text-lg w-full sm:w-auto">Connect via Open Banking</a>
+        <button class="btn btn-ghost text-base sm:text-lg w-full sm:w-auto" data-nav="home">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LENDERS (unchanged) -->
+  <section id="view-lenders" class="hide max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="grid md:grid-cols-2 gap-10 sm:gap-16 items-start">
+      <div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">For lenders</h2>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+          Sold delivers pre-qualified homeowners to your internal teams so you can dial mortgage flow up or down whilst respecting internal ROE hurdles and cost of capital requirements without touching front-book pricing.
+        </p>
+        <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+          <li>Portfolio optimisation by segment, postcode, LVR, or channel.</li>
+          <li>Consent-backed data for swift income/expense validation.</li>
+          <li>No disruption to advertised front-book rates.</li>
+        </ul>
+      </div>
+      <div class="bw-card p-6 sm:p-8" id="contact">
+        <h3 class="text-lg sm:text-xl font-semibold">Contact us</h3>
+        <p class="mt-2 sm:mt-3 text-sm sm:text-base text-neutral-700">We’ll get back to you in 1-2 business days.</p>
+        <form class="mt-5 sm:mt-6 space-y-4 sm:space-y-5" action="https://formspree.io/f/your-form-id" method="POST">
+          <div>
+            <label class="block text-sm mb-1" for="name">Name</label>
+            <input class="w-full px-3 py-3 outline-none focus:ring-2 focus:ring-black" type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="email">Work email</label>
+            <input class="w-full px-3 py-3 outline-none focus:ring-2 focus:ring-black" type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="message">Message</label>
+            <textarea class="w-full px-3 py-3 outline-none focus:ring-2 focus:ring-black" id="message" name="message" rows="4" placeholder="Tell us about your portfolio objectives…"></textarea>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <button type="submit" class="btn btn-primary text-base sm:text-lg w-full sm:w-auto">Send</button>
+            <button type="button" class="btn btn-ghost text-base sm:text-lg w-full sm:w-auto" data-nav="home">Back</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: REFINANCE -->
+  <section id="view-refinance" class="hide max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Refinance your loan</h2>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        Quick sense-check of your current rate, repayments and remaining term against competitive market offers — without a credit check.
+      </p>
+      <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>Compare your current rate vs what’s available now.</li>
+        <li>Estimate savings and check loan-value-ration (LVR) using your property value.</li>
+        <li>Explore options like cash-out or debt consolidation.</li>
+      </ul>
+      <div class="mt-8 sm:mt-10 flex gap-4 sm:gap-5 flex-wrap">
+        <!-- Replace cta URL with your Brevo Refinance form -->
+        <a href="https://13b359ae.sibforms.com/serve/MUIFAAjntwEbvY2IUPgQs6qCk_3R3mg19JtxYviV-ncCidv-chM9eThN8RwWw3Uqma2quLJG_eq0_-Ei4cMFx3dRB0B7yN3hg5qKEvrYM1J-M-jxkPyW03e5OL51xXV7t2_3L9u0EsISK7PiDljQon1zVsOFt46CwMB06P24Sw6k7i2WG7KgT_W00-34t86a8uCv8rRU6PeSn918wg==" class="btn btn-primary text-base sm:text-lg w-full sm:w-auto">Let’s See What Sold Can Do</a>
+        <button class="btn btn-ghost text-base sm:text-lg w-full sm:w-auto" data-nav="home">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: FIRST HOME BUYER -->
+  <section id="view-fhb" class="hide max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">First Home Buyer</h2>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        See what you could borrow based on your deposit, income and any eligible schemes — then explore lenders who play nicely with first-timers.
+      </p>
+      <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>Borrowing power estimate using deposit + income ranges.</li>
+        <li>Check scheme eligibility (e.g., First Home Owner Grant/shared equity).</li>
+        <li>Shortlist lenders with strong First Home Buyer appetite right now.</li>
+      </ul>
+      <div class="mt-8 sm:mt-10 flex gap-4 sm:gap-5 flex-wrap">
+        <!-- Replace cta URL with your Brevo FHB form -->
+        <a href="https://13b359ae.sibforms.com/serve/MUIFAP-d0Nk2UbQ-sB-p-3mau7R-YM7aYsThPvSzfXQSbMaktPHcT9Gh3q7ksY_b-ZZvJMwR2zBnANTNFh9L6TLbDAvm3sFNmrbQT-EZpNCePWIpKw2Ud2MaAVi638_fLHZxii1xND4OQdljOhUAeOXPDIUmrIiAoDrH0KMnpiO98OmvTmGTZUiQ44kzgJLN-SeXw5Tozdx0jeEiCw==" class="btn btn-primary text-base sm:text-lg w-full sm:w-auto">Let’s See What Sold Can Do</a>
+        <button class="btn btn-ghost text-base sm:text-lg w-full sm:w-auto" data-nav="home">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: PURCHASE / UPGRADER -->
+  <section id="view-purchase" class="hide max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Purchase / Upgrader</h2>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        Plan your next move — estimate borrowing power, compare features like offset/redraw and understand bridging vs sell-then-buy.
+      </p>
+      <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>Understand options if you keep, rent or sell your current home.</li>
+        <li>Compare bridging, fixed/variable and offset structures.</li>
+        <li>Get a practical timeframe for pre-approval and settlement.</li>
+      </ul>
+      <div class="mt-8 sm:mt-10 flex gap-4 sm:gap-5 flex-wrap">
+        <!-- Replace cta URL with your Brevo Purchase form -->
+        <a href="https://13b359ae.sibforms.com/serve/MUIFAFv1x8v7IYoAfW1CpoVQeNNHc-jzQtVALEFKOO3JZenOOpYHjlaY4HQ9aiEXXNf0h-7vxtTRLv7E2MuvJ6sCGmaxa1kLtNhggz2OqkD0MuaDqg1LP5d5zbAjCt75dJBYx7lBxdF9j8Mvsoky3MlIwVKPWbtksneuHd56avMoILB0dsRtQKdgCRqCqysGpVZG6sFTbZYHFJoMWw==" class="btn btn-primary text-base sm:text-lg w-full sm:w-auto">Let’s See What Sold Can Do</a>
+        <button class="btn btn-ghost text-base sm:text-lg w-full sm:w-auto" data-nav="home">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: INVESTMENT -->
+  <section id="view-investment" class="hide max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-28 fade">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Investment Property</h2>
+      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-neutral-700">
+        Quickly test your next investment: available equity, rental yield targets and lender appetite for Interest Only (IO) vs Principal &amp; Interest (PI) — no credit check.
+      </p>
+      <ul class="mt-6 sm:mt-8 space-y-2 sm:space-y-3 list-disc list-inside text-neutral-700 dotpoints">
+        <li>Estimate equity release and preferred loan size.</li>
+        <li>Sense-check cashflow vs yield expectations.</li>
+        <li>Understand lender appetite for investor loans today.</li>
+      </ul>
+      <div class="mt-8 sm:mt-10 flex gap-4 sm:gap-5 flex-wrap">
+        <!-- Replace cta URL with your Brevo Investment form -->
+        <a href="https://13b359ae.sibforms.com/serve/MUIFAFpiGdyabj47pFhYjXO2R4_NGTNN8YYp0hYELynlJ5u_0KSfrwKdLjzfjvtapIPHijJAXVlB8cFxo28OEI8dWyIrOVIyOpA81MHLn_V1uxiTN4SY-x5u6nOVZGKn6c5-muQE1nuO0s9TOeMxSH57VyWvmHrs8uEIX2z6IYV5sTj5OMCj1KjeGRSPZYZhK6-ogIybAnc3ntI23w==" class="btn btn-primary text-base sm:text-lg w-full sm:w-auto">Let’s See What Sold Can Do</a>
+        <button class="btn btn-ghost text-base sm:text-lg w-full sm:w-auto" data-nav="home">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-sm text-neutral-400">
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <p>© <span id="y"></span> Sold. All rights reserved.</p>
+        <div class="flex gap-6">
+          <button class="link" data-nav="customers">Customers</button>
+          <button class="link" data-nav="lenders">Lenders</button>
+          <a class="link" href="terms.html" target="_blank" rel="noopener">Terms</a>
+          <a class="link" href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="text-xs leading-6 text-neutral-600">
+        <p>
+          <strong>Sold Financial</strong> is a trading name of <strong>Homei Fi Pty Ltd</strong> (ABN 26 691 328 499).<br>
+          Homei Fi Pty Ltd (Credit Representative Number <strong>573517</strong>) is authorised under
+          Australian Credit Licence Number <strong>486112</strong> (Purple Circle Financial Services Pty Ltd).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const views = {
+      home: document.getElementById('view-home'),
+      customers: document.getElementById('view-customers'),
+      lenders: document.getElementById('view-lenders'),
+      refinance: document.getElementById('view-refinance'),
+      fhb: document.getElementById('view-fhb'),
+      purchase: document.getElementById('view-purchase'),
+      investment: document.getElementById('view-investment')
+    };
+    function show(view){
+      Object.values(views).forEach(v=>v.classList.add('hide'));
+      views[view].classList.remove('hide');
+      setTimeout(()=>views[view].classList.add('visible'),50);
+      window.scrollTo({top:0, behavior:'instant'});
+    }
+    document.addEventListener('click', (e)=>{
+      const t = e.target.closest('[data-nav]');
+      if(!t) return;
+      e.preventDefault();
+      const dest = t.getAttribute('data-nav');
+      if(views[dest]) show(dest);
+      if(dest==='home') history.replaceState({}, '', '#');
+      else history.replaceState({}, '', '#'+dest);
+    });
+    const hash = (location.hash||'').replace('#','');
+    if(hash && views[hash]) show(hash); else show('home');
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

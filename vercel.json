@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+
+    { "source": "/frollo", "destination": "/frollo.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+
+    { "source": "/refinance", "destination": "/refinance.html" },
+    { "source": "/success", "destination": "/success.html" },
+
+    { "source": "/first-home-buyer2", "destination": "/first-home-buyer2.html" },
+    { "source": "/first-home-buyer2-success", "destination": "/first-home-buyer2-success.html" },
+
+    { "source": "/refinance2", "destination": "/refinance2.html" },
+    { "source": "/refinance2-success", "destination": "/refinance2-success.html" },
+
+    { "source": "/purchase2", "destination": "/purchase2.html" },
+    { "source": "/purchase2-success", "destination": "/purchase2-success.html" },
+
+    { "source": "/investment2", "destination": "/investment2.html" },
+    { "source": "/investment2-success", "destination": "/investment2-success.html" }
+  ]
+}
